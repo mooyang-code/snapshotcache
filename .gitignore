@@ -1,0 +1,8 @@
+/.idea/
+/.vscode/
+/.codex/
+/bin/
+/dist/
+/tmp/
+*.test
+*.out

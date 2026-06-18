@@ -1,0 +1,36 @@
+schema: spec-driven
+
+# Project context (optional)
+# This is shown to AI when creating artifacts.
+# Add your tech stack, conventions, style guides, domain knowledge, etc.
+# Example:
+#   context: |
+#     Tech stack: TypeScript, React, Node.js
+#     We use conventional commits
+#     Domain: e-commerce platform
+context: |
+  项目是独立 Go 公共库 github.com/mooyang-code/snapshotcache。
+  目标是提供全量快照缓存能力：从 HTTP、SQL DB、SQLite 或自定义 Source 拉取数据，构建不可变内存快照与查询索引，并使用本地文件快照兜底。
+  不支持 schemaID、etag、灰度、多版本规则、分布式缓存或复杂 SQL 查询引擎。
+  设计文档位于 docs/snapshotcache-design.md。
+  实现必须采用测试先行，执行计划和说明文档使用中文。
+
+# Per-artifact rules (optional)
+# Add custom rules for specific artifacts.
+# Example:
+#   rules:
+#     proposal:
+#       - Keep proposals under 500 words
+#       - Always include a "Non-goals" section
+#     tasks:
+#       - Break tasks into chunks of max 2 hours
+rules:
+  proposal:
+    - 使用中文。
+    - 明确列出非目标，避免把 schemaID、etag、灰度发布带入本库。
+  design:
+    - 使用中文。
+    - 明确公共库边界和 moox 接入边界。
+  tasks:
+    - 使用中文。
+    - 任务必须包含测试先行、HTTP 端到端验证、SQLite 端到端验证和文件兜底验证。
